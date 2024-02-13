@@ -19,7 +19,9 @@ jobs:
         target_platform:
           - x86_64
           - arm64
-    runs-on: self-hosted
+    runs-on:
+      - self-hosted
+      - ${{ matrix.target_platform }}
 
     steps:
     - name: Install third party dependencies
