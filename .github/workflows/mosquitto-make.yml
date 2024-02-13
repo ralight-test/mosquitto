@@ -9,10 +9,11 @@ on:
     branches:
       - develop
       - fixes
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: self-hosted
 
     steps:
     - name: Install third party dependencies
